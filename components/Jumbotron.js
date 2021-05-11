@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Jumbotron() {
   return (
     <div class="container mx-auto my-5 py-20 bg-gradient-to-r from-blue-900 via-blue-400 to-green-500">
@@ -6,10 +8,11 @@ function Jumbotron() {
         <h3 class="text-2xl mb-8 text-gray-200">
           Millions of movies, TV shows and people to discover. Explore now.
         </h3>
-
-        <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
-          Explore
-        </button>
+        <Link href="https://www.themoviedb.org/">
+          <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
+            Explore
+          </button>
+        </Link>
       </div>
     </div>
   );
