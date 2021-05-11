@@ -1,6 +1,6 @@
 function Jumbotron() {
   return (
-    <div class="py-20 bg-gradient-to-r from-blue-900 via-blue-400 to-green-500">
+    <div class="container mx-auto my-5 py-20 bg-gradient-to-r from-blue-900 via-blue-400 to-green-500">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold mb-2 text-white">Welcome.</h2>
         <h3 class="text-2xl mb-8 text-gray-200">
