@@ -15,15 +15,15 @@ function Header() {
         </Link>
 
         <Link href="/about">
-          <h1 className="float-right justify-center items-center px-6 rounded text-white hover:bg-green-600 hover:text-white">
+          <a className="float-right justify-center items-center px-6 text-white font-bold hover:text-green-600">
             About
-          </h1>
+          </a>
         </Link>
 
         <Link href="/">
-          <h1 className="float-right justify-center items-center px-6 rounded text-white hover:bg-green-600 hover:text-white">
+          <a className="float-right justify-center items-center px-6 text-white font-bold hover:text-green-600">
             Home
-          </h1>
+          </a>
         </Link>
       </nav>
     </div>
