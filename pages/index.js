@@ -38,7 +38,7 @@ const Home = ({ populer, trend }) => {
           <Jumbotron />
         </div>
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">Populer Movies</h1>
+          <h1 className="font-bold text-4xl">What's Popular</h1>
         </div>
         <div className="container mx-auto">
           <div className="flex overflow-x-auto">
@@ -59,7 +59,7 @@ const Home = ({ populer, trend }) => {
         </div>
 
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">Populer Movies</h1>
+          <h1 className="font-bold text-4xl">Trending</h1>
         </div>
         <div className="container mx-auto">
           <div className="flex overflow-x-auto">
