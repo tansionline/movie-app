@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default function About() {
   return (
@@ -15,9 +13,7 @@ export default function About() {
       </Head>
 
       <main>
-        <Header />
         <div className="h-screen"> </div>
-        <Footer />
       </main>
     </div>
   );

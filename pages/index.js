@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
 
 export default function Home() {
@@ -16,10 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header />
         <Jumbotron />
-
-        <Footer />
       </main>
     </div>
   );
