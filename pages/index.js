@@ -1,7 +1,19 @@
 import Head from "next/head";
 import Jumbotron from "../components/Jumbotron";
+import Link from "next/link";
 
-const Home = () => {
+export const getStaticProps = async () => {
+  const res = await fetch(
+    "https://api.themoviedb.org/3/movie/popular?api_key=fb4727e57cf6241f7633a3a0486273da&language=en-US&page=1"
+  );
+  const data = await res.json();
+
+  return {
+    props: { data: data.results },
+  };
+};
+
+const Home = ({ data }) => {
   return (
     <div>
       <Head>
@@ -14,7 +26,31 @@ const Home = () => {
       </Head>
 
       <main>
-        <Jumbotron />
+        <div>
+          <Jumbotron />
+        </div>
+        <div className="text-center my-20">
+          <h1 className="font-bold text-4xl">Populer Movies</h1>
+        </div>
+        <div className="container mx-auto">
+          <div className="flex overflow-x-auto">
+            {data.map((data) => (
+              <div className="p-12">
+                <Link href={"/" + data.id} key={data.id}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w185${data.poster_path}`}
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
+
+                <h1 className="break-all">{data.title}</h1>
+                <p>{data.release_date}</p>
+                <p>{data.vote_average}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );
