@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Jumbotron() {
+const Jumbotron = () => {
   return (
     <div class="container mx-auto my-5 py-20 bg-gradient-to-r from-blue-900 via-blue-400 to-green-500">
       <div class="container mx-auto px-6">
@@ -16,6 +16,6 @@ function Jumbotron() {
       </div>
     </div>
   );
-}
+};
 
 export default Jumbotron;

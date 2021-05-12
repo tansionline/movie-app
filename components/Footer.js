@@ -1,4 +1,4 @@
-function Footer() {
+const Footer = () => {
   return (
     <footer class="footer bg-white relative pt-1 border-b-2 border-red-700">
       <div class="container mx-auto px-6">
@@ -81,6 +81,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

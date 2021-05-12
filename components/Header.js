@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Header() {
+const Header = () => {
   return (
     <div className="container-xl p-12" id="headerBackground">
       <nav className="container mx-auto items-center flex-wrap p-3">
@@ -28,6 +28,6 @@ function Header() {
       </nav>
     </div>
   );
-}
+};
 
 export default Header;

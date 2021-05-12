@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Jumbotron from "../components/Jumbotron";
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -18,4 +18,6 @@ export default function Home() {
       </main>
     </div>
   );
-}
+};
+
+export default Home;
