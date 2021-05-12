@@ -2,18 +2,26 @@ import Head from "next/head";
 import Jumbotron from "../components/Jumbotron";
 import Link from "next/link";
 
+//https://api.themoviedb.org/3/trending/all/week?api_key=fb4727e57cf6241f7633a3a0486273da
+
 export const getStaticProps = async () => {
-  const res = await fetch(
+  const populerAPI = await fetch(
     "https://api.themoviedb.org/3/movie/popular?api_key=fb4727e57cf6241f7633a3a0486273da&language=en-US&page=1"
   );
-  const data = await res.json();
+
+  const trendAPI = await fetch(
+    "https://api.themoviedb.org/3/trending/all/week?api_key=fb4727e57cf6241f7633a3a0486273da"
+  );
+
+  const populer = await populerAPI.json();
+  const trend = await trendAPI.json();
 
   return {
-    props: { data: data.results },
+    props: { populer: populer.results, trend: trend.results },
   };
 };
 
-const Home = ({ data }) => {
+const Home = ({ populer, trend }) => {
   return (
     <div>
       <Head>
@@ -34,19 +42,39 @@ const Home = ({ data }) => {
         </div>
         <div className="container mx-auto">
           <div className="flex overflow-x-auto">
-            {data.map((data) => (
-              <div className="p-12">
-                <Link href={"/" + data.id} key={data.id}>
+            {populer.map((populer) => (
+              <div className="p-12" key={populer.id}>
+                <Link href={"/" + populer.id}>
                   <img
-                    src={`https://image.tmdb.org/t/p/w185${data.poster_path}`}
-                    width={1000}
-                    height={1000}
+                    src={`https://image.tmdb.org/t/p/w185${populer.poster_path}`}
                   />
                 </Link>
 
-                <h1 className="break-all">{data.title}</h1>
-                <p>{data.release_date}</p>
-                <p>{data.vote_average}</p>
+                <h1 className="break-all">{populer.title}</h1>
+                <p>{populer.release_date}</p>
+                <p>{populer.vote_average}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center my-20">
+          <h1 className="font-bold text-4xl">Populer Movies</h1>
+        </div>
+        <div className="container mx-auto">
+          <div className="flex overflow-x-auto">
+            {trend.map((trend) => (
+              <div className="p-12" key={trend.id}>
+                <Link href={"/" + trend.id}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
+                  />
+                </Link>
+
+                <h1 className="break-all">{trend.name}</h1>
+                <h1 className="break-all">{trend.title}</h1>
+                <p>{trend.release_date}</p>
+                <p>{trend.vote_average}</p>
               </div>
             ))}
           </div>
