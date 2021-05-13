@@ -29,10 +29,6 @@ const Home = ({ popular, trend }) => {
       <Head>
         <title>Movie Database</title>
         <meta name="description" content="Movie Database App" />
-        <link
-          rel="icon"
-          href="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-        />
       </Head>
 
       <main>
@@ -46,7 +42,7 @@ const Home = ({ popular, trend }) => {
           <div className="flex overflow-x-auto">
             {popular.map((popular) => (
               <div className="p-12" key={popular.id}>
-                <Link href={"/" + popular.id}>
+                <Link href={"/details/" + popular.id}>
                   <img
                     src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
                   />
@@ -67,7 +63,7 @@ const Home = ({ popular, trend }) => {
           <div className="flex overflow-x-auto">
             {trend.map((trend) => (
               <div className="p-12" key={trend.id}>
-                <Link href={"/" + trend.id}>
+                <Link href={"/details/" + trend.id}>
                   <img
                     src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
                   />

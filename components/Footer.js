@@ -1,4 +1,5 @@
 import data from "../data/Footer.json";
+import logo from "../data/Assets.json";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="sm:flex sm:mt-8">
           <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
             <div className="flex flex-col">
-              <img src={data.logoSrc} width={250} height={250} />
+              <img src={logo.footerLogo} width={250} height={250} />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
