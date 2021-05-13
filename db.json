@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "title": "headerLogo",
+      "link": "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+    }
+  ],
+  "header": [
+    {
+      "id": 1,
+      "name": "About"
+    },
+    {
+      "id": 2,
+      "name": "Home"
+    }
+  ],
+  "home": [
+    {
+      "id": 1,
+      "name": "What's Popular"
+    },
+    {
+      "id": 2,
+      "name": "Trending"
+    }
+  ],
+  "jumbotron": {
+    "id": 1,
+    "header": "Welcome",
+    "description": "Millions of movies, TV shows and people to discover. Explore now.",
+    "link": "https://www.themoviedb.org/"
+  }
+}
