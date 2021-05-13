@@ -1,8 +1,30 @@
 {
-  "links": [
+  "middle": [
     {
       "name": "GitHub",
       "link": "https://github.com/tansionline"
+    },
+    {
+      "name": "GitLab",
+      "link": "https://gitlab.com/tansionline"
+    },
+    {
+      "name": "Medium",
+      "link": "https://tansionline.medium.com/"
+    }
+  ],
+  "right": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/selcuk-tatar/"
+    },
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/tansionline"
+    },
+    {
+      "name": "Email",
+      "link": "mailto:selcuk.tatar@outlook.com"
     }
   ]
 }

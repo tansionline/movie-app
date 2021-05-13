@@ -14,59 +14,32 @@ const Footer = () => {
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
                 Social Media
               </span>
-              <span className="my-2">
-                <a
-                  href="https://github.com/tansionline"
-                  className="text-blue-700 text-md hover:text-blue-500"
-                >
-                  GitHub
-                </a>
-              </span>
-              <span className="my-2">
-                <a
-                  href="https://gitlab.com/tansionline"
-                  className="text-blue-700  text-md hover:text-blue-500"
-                >
-                  GitLab
-                </a>
-              </span>
-              <span className="my-2">
-                <a
-                  href="https://tansionline.medium.com/"
-                  className="text-blue-700 text-md hover:text-blue-500"
-                >
-                  Medium
-                </a>
-              </span>
+              {data.middle.map((data) => (
+                <span className="my-2">
+                  <a
+                    href={data.link}
+                    className="text-blue-700  text-md hover:text-blue-500"
+                  >
+                    {data.name}
+                  </a>
+                </span>
+              ))}
             </div>
+
             <div className="flex flex-col">
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
                 Social Media
               </span>
-              <span className="my-2">
-                <a
-                  href="https://www.linkedin.com/in/selcuk-tatar/"
-                  className="text-blue-700  text-md hover:text-blue-500"
-                >
-                  LinkedIn
-                </a>
-              </span>
-              <span className="my-2">
-                <a
-                  href="https://twitter.com/tansionline"
-                  className="text-blue-700  text-md hover:text-blue-500"
-                >
-                  Twitter
-                </a>
-              </span>
-              <span className="my-2">
-                <a
-                  href="mailto:selcuk.tatar@outlook.com"
-                  className="text-blue-700  text-md hover:text-blue-500"
-                >
-                  Email
-                </a>
-              </span>
+              {data.right.map((data) => (
+                <span className="my-2">
+                  <a
+                    href={data.link}
+                    className="text-blue-700  text-md hover:text-blue-500"
+                  >
+                    {data.name}
+                  </a>
+                </span>
+              ))}
             </div>
           </div>
         </div>
