@@ -1,3 +1,5 @@
+import data from "../data/Footer.json";
+
 const Footer = () => {
   return (
     <footer className="footer bg-white relative pt-1 border-b-2 border-red-700">
@@ -5,11 +7,7 @@ const Footer = () => {
         <div className="sm:flex sm:mt-8">
           <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
             <div className="flex flex-col">
-              <img
-                src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-                width={250}
-                height={250}
-              ></img>
+              <img src={data.logoSrc} width={250} height={250} />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">

@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Jumbotron from "../components/Jumbotron";
 import Link from "next/link";
-
-//https://api.themoviedb.org/3/trending/all/week?api_key=fb4727e57cf6241f7633a3a0486273da
+import data from "../data/HomePage.json";
 
 export const getStaticProps = async () => {
   const populerAPI = await fetch(
@@ -13,15 +12,18 @@ export const getStaticProps = async () => {
     "https://api.themoviedb.org/3/trending/all/week?api_key=fb4727e57cf6241f7633a3a0486273da"
   );
 
-  const populer = await populerAPI.json();
+  const popular = await populerAPI.json();
   const trend = await trendAPI.json();
 
   return {
-    props: { populer: populer.results, trend: trend.results },
+    props: {
+      popular: popular.results,
+      trend: trend.results,
+    },
   };
 };
 
-const Home = ({ populer, trend }) => {
+const Home = ({ popular, trend }) => {
   return (
     <div>
       <Head>
@@ -38,28 +40,28 @@ const Home = ({ populer, trend }) => {
           <Jumbotron />
         </div>
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">What's Popular</h1>
+          <h1 className="font-bold text-4xl">{data.popularHeader}</h1>
         </div>
         <div className="container mx-auto">
           <div className="flex overflow-x-auto">
-            {populer.map((populer) => (
-              <div className="p-12" key={populer.id}>
-                <Link href={"/" + populer.id}>
+            {popular.map((popular) => (
+              <div className="p-12" key={popular.id}>
+                <Link href={"/" + popular.id}>
                   <img
-                    src={`https://image.tmdb.org/t/p/w185${populer.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
                   />
                 </Link>
 
-                <h1 className="break-all">{populer.title}</h1>
-                <p>{populer.release_date}</p>
-                <p>{populer.vote_average}</p>
+                <h1 className="break-all">{popular.title}</h1>
+                <p>{popular.release_date}</p>
+                <p>{popular.vote_average}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">Trending</h1>
+          <h1 className="font-bold text-4xl">{data.trendsHeader}</h1>
         </div>
         <div className="container mx-auto">
           <div className="flex overflow-x-auto">
