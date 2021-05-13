@@ -14,13 +14,14 @@ const Footer = () => {
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
                 Social Media
               </span>
-              {data.middle.map((data) => (
+              {data.middle.map((middle) => (
                 <span className="my-2">
                   <a
-                    href={data.link}
+                    href={middle.link}
+                    key={middle}
                     className="text-blue-700  text-md hover:text-blue-500"
                   >
-                    {data.name}
+                    {middle.name}
                   </a>
                 </span>
               ))}
@@ -30,13 +31,14 @@ const Footer = () => {
               <span className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
                 Social Media
               </span>
-              {data.right.map((data) => (
+              {data.right.map((right) => (
                 <span className="my-2">
                   <a
-                    href={data.link}
+                    href={right.link}
+                    key={right}
                     className="text-blue-700  text-md hover:text-blue-500"
                   >
-                    {data.name}
+                    {right.name}
                   </a>
                 </span>
               ))}
