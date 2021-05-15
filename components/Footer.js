@@ -15,10 +15,9 @@ const Footer = () => {
                 Social Media
               </span>
               {data.middle.map((middle) => (
-                <span className="my-2">
+                <span className="my-2" key={middle.id}>
                   <a
                     href={middle.link}
-                    key={middle}
                     className="text-blue-700  text-md hover:text-blue-500"
                   >
                     {middle.name}
@@ -32,10 +31,9 @@ const Footer = () => {
                 Social Media
               </span>
               {data.right.map((right) => (
-                <span className="my-2">
+                <span className="my-2" key={right.id}>
                   <a
                     href={right.link}
-                    key={right}
                     className="text-blue-700  text-md hover:text-blue-500"
                   >
                     {right.name}

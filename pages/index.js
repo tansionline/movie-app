@@ -38,20 +38,20 @@ const Home = ({ popular, trend }) => {
         <div className="text-center my-20">
           <h1 className="font-bold text-4xl">{data.popularHeader}</h1>
         </div>
-        <div className="container mx-auto">
-          <div className="flex overflow-x-auto">
+        <div className="container mx-auto flex overflow-x-scroll pb-10">
+          <div className="flex flex-nowrap">
             {popular.map((popular) => (
-              <div className="p-12" key={popular.id}>
-                <Link href={"/details/" + popular.id}>
+              <Link href={"/details/" + popular.id} key={popular.id}>
+                <div className="ml-5 w-64 h-128 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <img
                     src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
                   />
-                </Link>
 
-                <h1 className="break-all">{popular.title}</h1>
-                <p>{popular.release_date}</p>
-                <p>{popular.vote_average}</p>
-              </div>
+                  <h1 className="break-all">{popular.title}</h1>
+                  <p>{popular.release_date}</p>
+                  <p>{popular.vote_average}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -59,21 +59,21 @@ const Home = ({ popular, trend }) => {
         <div className="text-center my-20">
           <h1 className="font-bold text-4xl">{data.trendsHeader}</h1>
         </div>
-        <div className="container mx-auto">
-          <div className="flex overflow-x-auto">
+        <div className="container mx-auto flex overflow-x-scroll pb-10">
+          <div className="flex flex-nowrap">
             {trend.map((trend) => (
-              <div className="p-12" key={trend.id}>
-                <Link href={"/details/" + trend.id}>
+              <Link href={"/details/" + trend.id} key={trend.id}>
+                <div className=" ml-5 w-64 h-128 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <img
                     src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
                   />
-                </Link>
 
-                <h1 className="break-all">{trend.name}</h1>
-                <h1 className="break-all">{trend.title}</h1>
-                <p>{trend.release_date}</p>
-                <p>{trend.vote_average}</p>
-              </div>
+                  <h1 className="break-all">{trend.name}</h1>
+                  <h1 className="break-all">{trend.title}</h1>
+                  <p>{trend.release_date}</p>
+                  <p>{trend.vote_average}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
