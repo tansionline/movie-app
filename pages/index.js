@@ -2,6 +2,7 @@ import Head from "next/head";
 import Jumbotron from "../components/Jumbotron";
 import Link from "next/link";
 import data from "../data/HomePage.json";
+import moment from "moment";
 
 export const getStaticProps = async () => {
   const populerAPI = await fetch(
@@ -48,7 +49,8 @@ const Home = ({ popular, trend }) => {
                   />
 
                   <h1 className="break-all">{popular.title}</h1>
-                  <p>{popular.release_date}</p>
+                  <h1 className="break-all">{popular.name}</h1>
+                  <p>{moment(popular.release_date).format("MMM DD, YYYY")}</p>
                   <p>{popular.vote_average}</p>
                 </div>
               </Link>
@@ -63,14 +65,14 @@ const Home = ({ popular, trend }) => {
           <div className="flex flex-nowrap">
             {trend.map((trend) => (
               <Link href={"/details/" + trend.id} key={trend.id}>
-                <div className=" ml-5 w-64 h-128 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div className="ml-5 w-64 h-128 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <img
                     src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
                   />
 
                   <h1 className="break-all">{trend.name}</h1>
                   <h1 className="break-all">{trend.title}</h1>
-                  <p>{trend.release_date}</p>
+                  <p>{moment(trend.release_date).format("MMM DD, YYYY")}</p>
                   <p>{trend.vote_average}</p>
                 </div>
               </Link>
