@@ -8,7 +8,7 @@ const pageNotFound = () => {
         <title>404 Not Found</title>
       </Head>
 
-      <div className="gradient text-white min-h-screen flex items-center">
+      <div className="bg-gradient-to-br from-purple-900 via-purple-500 to-blue-800 text-white min-h-screen flex items-center">
         <div className="container mx-auto p-4 flex flex-wrap items-center">
           <div className="w-full md:w-5/12 text-center p-4">
             <img
