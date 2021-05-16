@@ -45,6 +45,11 @@ const Home = ({ popular, trend }) => {
               <Link href={"/details/" + popular.id} key={popular.id}>
                 <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden ">
                   <img
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "https://images-na.ssl-images-amazon.com/images/I/11W3VnNMHPL.SR160,240_BG243,243,243.jpg";
+                    }}
                     src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
                   />
 
@@ -68,6 +73,11 @@ const Home = ({ popular, trend }) => {
               <Link href={"/details/" + trend.id} key={trend.id}>
                 <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden">
                   <img
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "https://images-na.ssl-images-amazon.com/images/I/11W3VnNMHPL.SR160,240_BG243,243,243.jpg";
+                    }}
                     src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
                   />
 

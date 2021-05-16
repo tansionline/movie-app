@@ -94,6 +94,11 @@ const Details = ({
         <div className="container flex mx-auto p-12">
           <div className="flex justify-center w-1/4 ml-10">
             <img
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://images-na.ssl-images-amazon.com/images/I/11W3VnNMHPL.SR160,240_BG243,243,243.jpg";
+              }}
               className="rounded"
               src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
               width="65%"
@@ -120,7 +125,7 @@ const Details = ({
               <h1 className="text-xl">Overview:</h1>
               <p>{popular.overview}</p>
             </div>
-            <div>
+            <div className="mb-3">
               <p>
                 Keywords:{" "}
                 {keywords?.map((keyword) => (
@@ -128,29 +133,19 @@ const Details = ({
                 ))}
               </p>
             </div>
+            <div>
+              {/* /TODO */}
+              <h1 className="text-xl">Producer</h1>
+              {production_companies.map((producer) => (
+                <p key={producer.id} className="break-all">
+                  {producer.name}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">Producer</h1>
-        </div>
-        <div className="container mx-auto flex overflow-x-scroll pb-10">
-          <div className="flex flex-nowrap">
-            {production_companies.map((producer) => (
-              <div
-                className="ml-3 w-40 h-128 max-w-xs overflow-hidden"
-                key={producer.id}
-              >
-                <img
-                  src={`https://image.tmdb.org/t/p/w185${producer.logo_path}`}
-                />
-
-                <a className="break-all">{producer.name}</a>
-              </div>
-            ))}
-          </div>
-        </div>
         <div className="text-center my-20">
           <h1 className="font-bold text-4xl">Casts</h1>
         </div>
@@ -162,6 +157,11 @@ const Details = ({
                 key={cast.id}
               >
                 <img
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src =
+                      "https://images-na.ssl-images-amazon.com/images/I/11W3VnNMHPL.SR160,240_BG243,243,243.jpg";
+                  }}
                   src={`https://image.tmdb.org/t/p/w185${cast.profile_path}`}
                 />
                 <p className="break-all">{cast.original_name}</p>
