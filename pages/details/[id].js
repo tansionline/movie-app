@@ -50,6 +50,7 @@ export async function getServerSideProps(context) {
         movie_data.success = false;
       }
     });
+
   if (movie_data.success) {
     return {
       props: {
@@ -57,8 +58,8 @@ export async function getServerSideProps(context) {
         categories: movie_data.detail.genres,
         production_companies: movie_data.detail.production_companies,
         videos: movie_data.videos,
-        keywords: movie_data.keywords,
         credits: movie_data.credits,
+        keywords: movie_data.keywords,
       },
     };
   } else {
@@ -68,11 +69,11 @@ export async function getServerSideProps(context) {
 
 const Details = ({
   popular,
-  videos,
-  production_companies,
-  keywords,
   categories,
+  production_companies,
+  videos,
   credits,
+  keywords,
 }) => {
   return (
     <>
@@ -129,7 +130,7 @@ const Details = ({
               <p>
                 Keywords:{" "}
                 {keywords?.map((keyword) => (
-                  <a key={keyword.id}>#{keyword.name}</a>
+                  <a key={keyword.id}>#{keyword.name} </a>
                 ))}
               </p>
             </div>
@@ -165,6 +166,33 @@ const Details = ({
                 />
                 <p className="break-all font-bold mb-1">{cast.original_name}</p>
                 <p className="break-all">{cast.character}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="text-center my-20">
+          <h1 className="font-bold text-4xl">Videos</h1>
+        </div>
+        <div className="container mx-auto flex overflow-x-scroll pb-10">
+          <div className="flex flex-nowrap">
+            {videos.map((video) => (
+              <div
+                className="ml-3 w-full h-full overflow-hidden"
+                key={video.id}
+              >
+                <iframe
+                  className="mb-5"
+                  src={`https://www.youtube.com/embed/${video.key}`}
+                  width="800"
+                  height="500"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <p className="break-all font-bold mb-10">{video.name}</p>
               </div>
             ))}
           </div>
