@@ -18,7 +18,8 @@ const Footer = () => {
                 <span className="my-2" key={middle.id}>
                   <a
                     href={middle.link}
-                    className="text-blue-700  text-md hover:text-blue-500"
+                    target="_blank"
+                    className="text-green-500	  text-md hover:text-red-500"
                   >
                     {middle.name}
                   </a>
@@ -34,7 +35,8 @@ const Footer = () => {
                 <span className="my-2" key={right.id}>
                   <a
                     href={right.link}
-                    className="text-blue-700  text-md hover:text-blue-500"
+                    target="_blank"
+                    className="text-green-500	 text-md hover:text-red-500"
                   >
                     {right.name}
                   </a>
