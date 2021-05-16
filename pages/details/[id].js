@@ -134,12 +134,11 @@ const Details = ({
               </p>
             </div>
             <div>
-              {/* /TODO */}
               <h1 className="text-xl">Producer</h1>
               {production_companies.map((producer) => (
-                <p key={producer.id} className="break-all">
+                <a key={producer.id} className="break-all mr-2 ">
                   {producer.name}
-                </p>
+                </a>
               ))}
             </div>
           </div>
@@ -164,7 +163,7 @@ const Details = ({
                   }}
                   src={`https://image.tmdb.org/t/p/w185${cast.profile_path}`}
                 />
-                <p className="break-all">{cast.original_name}</p>
+                <p className="break-all font-bold mb-1">{cast.original_name}</p>
                 <p className="break-all">{cast.character}</p>
               </div>
             ))}
