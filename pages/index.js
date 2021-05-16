@@ -48,8 +48,9 @@ const Home = ({ popular, trend }) => {
                     src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
                   />
 
-                  <h1 className="break-all">{popular.title}</h1>
-                  <h1 className="break-all">{popular.name}</h1>
+                  <a className="break-all">
+                    {popular.title ? popular.title : popular.name}
+                  </a>
                   <p>{moment(popular.release_date).format("MMM DD, YYYY")}</p>
                   <p>{popular.vote_average}</p>
                 </div>
@@ -70,8 +71,9 @@ const Home = ({ popular, trend }) => {
                     src={`https://image.tmdb.org/t/p/w185${trend.poster_path}`}
                   />
 
-                  <h1 className="break-all">{trend.name}</h1>
-                  <h1 className="break-all">{trend.title}</h1>
+                  <h1 className="break-all">
+                    {trend.name ? trend.name : trend.title}
+                  </h1>
                   <p>{moment(trend.release_date).format("MMM DD, YYYY")}</p>
                   <p>{trend.vote_average}</p>
                 </div>
