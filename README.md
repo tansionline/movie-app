@@ -24,7 +24,7 @@ You can access demo page [here](https://movie-inky.vercel.app/)
 
 - Install package with `` yarn install `` or `` npm install ``
 
-- And start development server  with ``yarn dev `` or  ``npm run dev `` 
+- And start development server  with ``yarn dev``  or  ``npm run dev `` 
 
 - You can access in ``http://localhost:3000``
 
