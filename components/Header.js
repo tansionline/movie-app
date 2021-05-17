@@ -14,7 +14,7 @@ const Header = () => {
           <div className="w-6/12 sm:w-8/12 md:8/12 lg:w-10/12">
             <Link href="/">
               <img
-                className=""
+                className="cursor-pointer"
                 src={logo.headerLogo}
                 width={150}
                 height={150}

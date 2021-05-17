@@ -43,7 +43,7 @@ const Home = ({ popular, trend }) => {
           <div className="flex flex-nowrap">
             {popular.map((popular) => (
               <Link href={"/details/" + popular.id} key={popular.id}>
-                <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden ">
+                <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden cursor-pointer">
                   <img
                     onError={(e) => {
                       e.target.onerror = null;
@@ -72,7 +72,7 @@ const Home = ({ popular, trend }) => {
           <div className="flex flex-nowrap">
             {trend.map((trend) => (
               <Link href={"/details/" + trend.id} key={trend.id}>
-                <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden">
+                <div className="ml-3 w-40 h-128 max-w-xs overflow-hidden cursor-pointer">
                   <img
                     onError={(e) => {
                       e.target.onerror = null;
