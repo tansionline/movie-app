@@ -11,7 +11,7 @@ const Header = () => {
       </Head>
       <div className="container-xl p-12" id="headerBackground">
         <nav className="container mx-auto flex items-center p-3">
-          <div className="justify-start w-5/12 sm:w-8/12">
+          <div className="w-6/12 sm:w-8/12 md:8/12 lg:w-10/12">
             <Link href="/">
               <img
                 className=""
@@ -23,7 +23,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="justify-end w-3/12 sm:w-2/12">
+          <div className="w-3/12 sm:w-2/12 md:2/12 lg:w-1/12">
             <Link href="/">
               <a className="px-6 text-white font-bold hover:text-green-600">
                 {data.home}
@@ -31,7 +31,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="justify-start w-3/12 sm:w-2/12">
+          <div className="w-3/12 sm:w-2/12 md:2/12 lg:w-1/12">
             <Link href="/about">
               <a className="px-6 text-white font-bold hover:text-green-600">
                 {data.about}

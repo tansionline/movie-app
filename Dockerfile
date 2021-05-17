@@ -1,21 +1,15 @@
 FROM node:14
-
-ENV PORT 3000
-
-# Create app directory
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Installing dependencies
-COPY package*.json /usr/src/app/
-RUN yarn install
+COPY . ./
 
-# Copying source files
-COPY . /usr/src/app
-
-# Building app
-RUN yarn build
-EXPOSE 3000
+# building the app
+RUN npm i
+RUN npm run build
 
 # Running the app
-CMD "yarn" "dev"
+CMD [ "npm", "start" ]
+
+# for build docker image = docker build . -t my-next-js-app
+# for run docker run -p 80:3000 my-next-js-app
+# go localhost

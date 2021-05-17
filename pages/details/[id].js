@@ -82,47 +82,38 @@ const Details = ({
       </Head>
 
       <div
-        className="bg-black bg-cover bg-center bg-no-repeat mt-12"
+        className="bg-black bg-cover bg-center bg-no-repeat mt-12 bg-gradient-to-b from-gray-600 via-gray-500 to-transparent"
         style={{
-          background: `linear-gradient(to right, rgba(11.76%, 11.37%, 13.73%, 1.00) 150px, rgba(11.76%, 11.37%, 13.73%, 0.84) 100%),         
-           url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${popular.backdrop_path}')`,
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: `center`,
-          backgroundSize: `cover`,
-          height: `70vh`,
+          background: `linear-gradient(to right, rgba(11.76%, 11.37%, 13.73%, 1.00) 150px, rgba(11.76%, 11.37%, 13.73%, 0.84) 100%),
+           url(  "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${popular.backdrop_path}")`,
         }}
       >
-        <div className="container flex mx-auto p-12">
-          <div className="flex justify-center w-1/4 ml-10">
+        <div className="container flex flex-wrap mx-auto p-12">
+          <div className="flex mb-4 w-full sm:w-full md:w-full lg:w-4/12 lg:justify-start xl:10/12 xl:justify-center 2xl:8/12 2xl:justify-center ">
             <img
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src =
                   "https://images-na.ssl-images-amazon.com/images/I/11W3VnNMHPL.SR160,240_BG243,243,243.jpg";
               }}
-              className="rounded"
+              className="rounded w-8/12 sm:w-8/12 md:w-6/12 lg:w-10/12 xl:w-8/12 2xl:w-6/12 ml-10"
               src={`https://image.tmdb.org/t/p/w185${popular.poster_path}`}
-              width="65%"
             />
           </div>
-          <div className="w-3/4	text-white ml-10">
-            <div className="mb-2">
-              <h1 className="text-4xl font-bold	mb-2">
-                {popular.original_title}
-              </h1>
-              <p>
-                {moment(popular.release_date).format("MMM DD, YYYY")} |{" "}
-                <span>
-                  {categories?.map((category, index) => (
-                    <a key={index}>{category.name} </a>
-                  ))}
-                </span>{" "}
-              </p>
-              <p>
-                User Score: <span> {popular.vote_average} </span>
-              </p>
-            </div>
-            <div className="mb-2">
+          <div className="w-full sm:w-10/12 md:w-7/12 lg:w-6/12 xl:6/12 2xl:4/12  text-white ml-10">
+            <h1 className="text-4xl font-bold	mb-2">{popular.original_title}</h1>
+            <p>
+              {moment(popular.release_date).format("MMM DD, YYYY")} |{" "}
+              <span>
+                {categories?.map((category, index) => (
+                  <a key={index}>{category.name} </a>
+                ))}
+              </span>{" "}
+            </p>
+            <p>
+              User Score: <span> {popular.vote_average} </span>
+            </p>
+            <div className="mb-2 mt-4">
               <h1 className="text-xl">Overview:</h1>
               <p>{popular.overview}</p>
             </div>
@@ -176,23 +167,16 @@ const Details = ({
           <h1 className="font-bold text-4xl">Videos</h1>
         </div>
         <div className="container mx-auto flex overflow-x-scroll pb-10">
-          <div className="flex flex-nowrap">
+          <div className="flex overflow-hidden">
             {videos.map((video) => (
-              <div
-                className="ml-3 w-full h-full overflow-hidden"
-                key={video.id}
-              >
+              <div class="" key={video.id}>
                 <iframe
-                  className="mb-5"
                   src={`https://www.youtube.com/embed/${video.key}`}
-                  width="800"
-                  height="500"
-                  title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
-                <p className="break-all font-bold mb-10">{video.name}</p>
+
+                <p className="ml-3 break-all font-bold mb-10">{video.name}</p>
               </div>
             ))}
           </div>

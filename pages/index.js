@@ -39,7 +39,7 @@ const Home = ({ popular, trend }) => {
         <div className="text-center my-20">
           <h1 className="font-bold text-4xl">{data.popularHeader}</h1>
         </div>
-        <div className="container mx-auto flex overflow-x-scroll pb-10">
+        <div className="container mx-auto flex overflow-x-scroll pb-5">
           <div className="flex flex-nowrap">
             {popular.map((popular) => (
               <Link href={"/details/" + popular.id} key={popular.id}>
@@ -68,7 +68,7 @@ const Home = ({ popular, trend }) => {
         <div className="text-center my-20">
           <h1 className="font-bold text-4xl">{data.trendsHeader}</h1>
         </div>
-        <div className="container mx-auto flex overflow-x-scroll pb-10">
+        <div className="container mx-auto flex overflow-x-scroll pb-5">
           <div className="flex flex-nowrap">
             {trend.map((trend) => (
               <Link href={"/details/" + trend.id} key={trend.id}>

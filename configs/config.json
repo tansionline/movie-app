@@ -1,6 +1,6 @@
 {
   "apiUrl": "https://api.themoviedb.org/3",
-  "apiKey": "",
+  "apiKey": "API_KEY",
   "apiLanguageKey": "en-US",
   "apiImages": "https://image.tmdb.org/t/p/w185"
 }
