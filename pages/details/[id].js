@@ -167,16 +167,23 @@ const Details = ({
           <h1 className="font-bold text-4xl">Videos</h1>
         </div>
         <div className="container mx-auto flex overflow-x-scroll pb-10">
-          <div className="flex overflow-hidden">
+          <div className="flex flex-nowrap">
             {videos.map((video) => (
-              <div class="" key={video.id}>
+              <div
+                id="video-container"
+                className="ml-3 w-full h-full overflow-hidden"
+                key={video.id}
+              >
                 <iframe
+                  className="mb-5"
                   src={`https://www.youtube.com/embed/${video.key}`}
+                  width="800"
+                  height="500"
+                  title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-
-                <p className="ml-3 break-all font-bold mb-10">{video.name}</p>
+                <p className="break-all font-bold mb-10">{video.name}</p>
               </div>
             ))}
           </div>

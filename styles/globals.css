@@ -22,3 +22,24 @@
 #headerBackground {
   background-color: #0d253f;
 }
+
+@media only screen and (max-width: 1024px) {
+  iframe {
+    width: 600px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  iframe {
+    width: 320px;
+    height: 300px;
+  }
+}
