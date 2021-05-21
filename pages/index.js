@@ -37,7 +37,7 @@ const Home = ({ popular, trend }) => {
           <Jumbotron />
         </div>
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">{data.popularHeader}</h1>
+          <h1 className="font-bold text-5xl">{data.popularHeader}</h1>
         </div>
         <div className="container mx-auto flex overflow-x-scroll pb-5">
           <div className="flex flex-nowrap">
@@ -66,7 +66,7 @@ const Home = ({ popular, trend }) => {
         </div>
 
         <div className="text-center my-20">
-          <h1 className="font-bold text-4xl">{data.trendsHeader}</h1>
+          <h1 className="font-bold text-5xl">{data.trendsHeader}</h1>
         </div>
         <div className="container mx-auto flex overflow-x-scroll pb-5">
           <div className="flex flex-nowrap">

@@ -32,5 +32,4 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-TODO.md
+yarn.lock

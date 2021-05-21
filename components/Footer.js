@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer bg-white relative pt-1 border-b-2 border-red-700">
       <div className="container mx-auto px-6">
         <div className="sm:flex sm:mt-8">
-          <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+          <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-around">
             <div className="flex flex-col">
               <img src={logo.footerLogo} width={250} height={250} />
             </div>
