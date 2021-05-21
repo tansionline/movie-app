@@ -1,6 +1,6 @@
-# Movie App 
+# Movie App
 
-![homepage](https://user-images.githubusercontent.com/41347478/118561150-49127300-b773-11eb-9dda-7c59b84bf314.png)
+![homepagease](https://user-images.githubusercontent.com/30869493/119111646-8bfa7200-ba23-11eb-9049-414611d85758.jpg)
 
 # Demo 
 
@@ -30,5 +30,4 @@ You can access demo page [here](https://movie-inky.vercel.app/)
 
 # More Images
 
-![detail-1](https://user-images.githubusercontent.com/41347478/118561188-54659e80-b773-11eb-9bec-7718b44c5dca.png)
-![detail-2](https://user-images.githubusercontent.com/41347478/118561171-4f085400-b773-11eb-85f2-00fa9a39ee3e.png)
+![detail](https://user-images.githubusercontent.com/30869493/119112349-45f1de00-ba24-11eb-8121-775f14e82740.jpg)
