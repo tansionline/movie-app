@@ -18,7 +18,7 @@ Update: They approved the task, I have a meeting this week :ocean:
 
 # Demo 
 
-You can access demo page [here](https://movie-inky.vercel.app/)
+You can access demo page [here](https://movie-blue.vercel.app/)
 
 # Installation & Setup
 
