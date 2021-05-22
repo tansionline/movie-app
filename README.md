@@ -1,6 +1,19 @@
+
 # Movie App
 
 ![homepagease](https://user-images.githubusercontent.com/30869493/119111646-8bfa7200-ba23-11eb-9049-414611d85758.jpg)
+Movie App is a page that lists famous and trending movies. You can access them inside:
+
+-  Movie Name
+- Release Date
+- Average Vote
+- Cast
+- Trailers
+- Posters
+- Producers
+
+Note: That was my Junior Frontend Developer task :cyclone: 
+Update: They approved the task, I have a meeting this week :ocean:
 
 # Demo 
 
