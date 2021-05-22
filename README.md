@@ -13,6 +13,7 @@ Movie App is a page that lists famous and trending movies. You can access them i
 - Producers
 
 Note: That was my Junior Frontend Developer task :cyclone: 
+
 Update: They approved the task, I have a meeting this week :ocean:
 
 # Demo 
