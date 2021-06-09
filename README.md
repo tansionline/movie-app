@@ -18,6 +18,8 @@ Update: They approved the task, I have a meeting this week :ocean:
 
 Update: I met the team lead and HR. They said they would come back to me :octocat: 
 
+Update: They found a better profile. I didn't get the job :alien: 
+
 # Demo 
 
 You can access demo page [here](https://movie-blue.vercel.app/)
